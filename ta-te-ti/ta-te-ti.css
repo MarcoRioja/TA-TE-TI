@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f6e9e9;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 72px;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.cell.win:hover {
+    background-color: #6fd98c;
+}
+
+.alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.cell.win {
+    background-color: #9ccc65;
+    /* Color de fondo verde para la línea ganadora */
+    color: white;
+}
+
+.cell.lose {
+    background-color: #FF4136;
+    /* Color de fondo verde para la línea perdedora */
+    color: white;
+}
+
+#reset-button {
+    margin: 10px;
+    background-color: #FF4136;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#reset-button:hover {
+    background-color: #FF6347;
+}
+
+#back-button {
+    margin: 10px;
+    background-color: #365bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#back-button:hover {
+    background-color: #3050e1;
+}
